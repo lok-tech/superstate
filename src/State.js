@@ -9,12 +9,15 @@ class State {
 
 	get(key, defaultValue) {
 		if (typeof key === 'string') {
-			return this.data[key] ?? defaultValue;
+			if (typeof this.data[key] === 'undefined') {
+				return defaultValue;
+			}
+			return this.data[key];
 		}
 
 		if (typeof key === 'object') {
 			return Object.keys(key).reduce((accumulator, currentKey) => {
-				accumulator[currentKey] = this.data[currentKey] ?? key[currentKey];
+				accumulator[currentKey] = (typeof this.data[currentKey] !== 'undefined') ? this.data[currentKey] : key[currentKey];
 				return accumulator;
 			}, {});
 		}
