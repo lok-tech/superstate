@@ -1,6 +1,6 @@
 {
 	"name": "lok-superstate",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Shared state with observer pattern",
 	"main": "index.js",
 	"scripts": {
@@ -10,6 +10,6 @@
 		"type": "git",
 		"url": "https://github.com/lok-tech/superstate.git"
 	},
-	"author": "g0dlight",
+	"author": "Orel Hadad <orel@lok.tech> (https://github.com/g0dlight)",
 	"license": "ISC"
 }
